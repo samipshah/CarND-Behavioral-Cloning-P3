@@ -74,18 +74,17 @@ I initially tried with the most basic Dense 1 layer network. Ofcourse it did not
 The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes
 
 1. Convolution layer extracting 24 features from 5x5 image with 2x2 stride.
-2. Max Pool over 2x2 region with 2x2 stride
-3. Convolution layer extracting 36 features from 5x5 image with 2x2 stride.
-4. Max Pool over 2x2 region with 2x2 stride
-5. Convolution layer extracting 48 features from 5x5 image with 2x2 stride 
-6. Convolution layer extracting 64 features from 3x3 image
-7. Convolution layer extracting 64 features from 3x3 image
-8. Flatten layer
-9. Fully connected layer with 1164 nodes
-10. Fully connected layer with 100 nodes
-11. Fully connected layer with 50 nodes
-12. Fully connected layer with 10 nodes
-13. Output layer with 1 node
+2. Convolution layer extracting 36 features from 5x5 image with 2x2 stride.
+3. Convolution layer extracting 48 features from 5x5 image with 2x2 stride 
+4. Convolution layer extracting 64 features from 3x3 image
+5. Convolution layer extracting 64 features from 3x3 image
+6. Flatten layer
+7. Fully connected layer with 1164 nodes
+8. Dropout layer with 0.2 probability
+9. Fully connected layer with 100 nodes
+10. Fully connected layer with 50 nodes
+11. Fully connected layer with 10 nodes
+12. Output layer with 1 node
 
 #### 3. Creation of the Training Set & Training Process
 
