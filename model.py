@@ -17,16 +17,17 @@ def nvidia_model():
     # convolution layer extracting 24 features from 5x5x3 image
     model.add(Conv2D(24, (5, 5), strides=(2, 2), padding='same', activation='relu'))
     # max pooling in each feature layer to move towards most important
-    model.add(MaxPool2D(pool_size=(2, 2), strides=(2, 2), padding='same'))
+    # model.add(MaxPool2D(pool_size=(2, 2), strides=(2, 2), padding='same'))
     # another convolution layer
     model.add(Conv2D(36, (5, 5), strides=(2, 2), padding='same', activation='relu'))
-    model.add(MaxPool2D(pool_size=(2, 2), strides=(2, 2), padding='valid'))
+    # model.add(MaxPool2D(pool_size=(2, 2), strides=(2, 2), padding='valid'))
     model.add(Conv2D(48, (5, 5), strides=(2, 2), padding='same', activation='relu'))
     model.add(Conv2D(64, (3, 3), strides=(1, 1), padding='same', activation='relu'))
     model.add(Conv2D(64, (3, 3), strides=(1, 1), padding='same', activation='relu'))
     model.add(Flatten())
     # gradual reduction in dimensions in fully connected layer
     model.add(Dense(1164))
+    model.add(Dropout(0.2))
     model.add(Dense(100))
     model.add(Dense(50))
     model.add(Dense(10))
